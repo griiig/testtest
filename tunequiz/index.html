@@ -1,10 +1,85 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-    <script src="script.js"></script>
-    <script src="p5.sound.js"></script>
-      
+    <meta charset="utf-8" />
+    <title>Tunequiz - Fest i Danmark</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="p5.sound.js"></script>
+      <script type="text/javascript">
+          function ja() {
+              document.getElementById("xbut").disabled = true;   
+            }
+      </script>
   </head>
-  <body>
-  </body>
+    
+  <body onload="ja()">
+<div id="p5_loading" class="loadingclass" >loader sange...</div>
+      
+<div class="quiz" style="width:100%;">
+
+    
+    <div class="choose" id="choose" style="float:left;">
+        <input type="radio" id="n" value="n" name="a"/>Nem(3s)
+        <input type="radio" id="m" value="m" name="a" checked="checked"/>Medium(1s)
+        <input type="radio" id="s" value="s" name="a"/>Svær(0.5s) 
+        <button onclick="buttons()" style="margin: 2px">Vælg!</button>
+    </div>
+
+    <div style="clear: both;">
+    </div>
+          <div >
+            <button id="but" style="margin: 2px">Ny sang!</button>
+    </div>
+    <div disabled="disabled" class="choises" id="choises">
+        <table style="width:100%">
+            <tr id="box">
+                <th id="1"><button id="xbut">BDK - KESI, Gilli</button></th>
+                <th><button id="xbut">London Town - Branco, Gilli</button></th> 
+                <th><button id="xbut">Endnu - Stepz, Gilli, Benny Jamz, Branco</button></th>
+                <th><button id="xbut">Culo - Gilli, Branco</button></th>
+                <th><button id="xbut">Oui - Sivas, NODE, Gilli</button></th>
+                <th><button id="xbut">All In - Branco, Gilli</button></th>
+            </tr>
+            <tr id="box">
+                <th><button id="xbut">Orale - Gilli</button></th>
+                <th><button id="xbut">d.a.u.d.a - Sivas, Gilli</button></th> 
+                <th><button id="xbut">Rally	- Sivas, Gilli</button></th>
+                <th><button id="xbut">Aldrig For Sjov - ATYPISK, Branco, Gilli</button></th>
+                <th><button id="xbut">LIV$TIL - Molo (Benny Jamz, Gilli, MellemFingaMuzik)</button></th>
+                <th><button id="xbut">Bølgen - Molo (Benny Jamz, Gilli, MellemFingaMuzik)</button></th>
+            </tr>
+            <tr id="box">
+                <th><button id="xbut">Dedikeret - Molo (Benny Jamz, Gilli, MellemFingaMuzik)</button></th>
+                <th><button id="xbut">Skejsen - Molo (Benny Jamz, Gilli, MellemFingaMuzik)</button></th> 
+                <th><button id="xbut">Safari - Molo (Benny Jamz, Gilli, MellemFingaMuzik)</button></th>
+                <th><button id="xbut">Jailhouse - Carmon, Branco</button></th>
+                <th><button id="xbut">Vai Amor - Gilli</button></th>
+                <th><button id="xbut">Øjne på mig - ICEKIID, KESI </button></th>
+            </tr>
+            <tr id="box">
+                <th><button id="xbut">Dem - Omar</button></th>
+                <th><button id="xbut">En Sang - Gucci Mane, Emil Stabil</button></th> 
+                <th><button id="xbut">Rum bum bum - Navid</button></th>
+                <th><button id="xbut">Sydpå	- Bro</button></th>
+                <th><button id="xbut">Nede Mette - Blak</button></th>
+                <th><button id="xbut">Søvnløs (remix) - Kesi</button></th>
+              </tr>
+             <tr id="box">
+                <th><button id="xbut">Slem igen - Blak, Jimilian</button></th>
+                <th><button id="xbut">Bedre - KIDD, Don</button></th> 
+                <th><button id="xbut">Ik' lavet penge - KIDD</button></th>
+                <th><button id="xbut">Model - Gulddreng</button></th>
+                <th><button id="xbut">Unz Unz - Specktors </button></th>
+                <th><button id="xbut">Damer på lager - Jimilian</button></th>
+              </tr>
+             <tr id="box">
+                <th><button id="xbut">Langsom - Gilli</button></th>
+              </tr>
+        </table>
+    </div>
+</div>
+    
+</body>
 </html>
